@@ -25,7 +25,7 @@ const changeComponent = (name) => {
           <dl class="ml-4"><a href="javascript:;" @click="changeComponent(Base64Decode)" class="underline">Decode</a></dl>
         </dl>
         <dl>
-          <dt>Base64</dt>
+          <dt>URL</dt>
           <dl class="ml-4"><a href="javascript:;" @click="changeComponent(UrlEncode)" class="underline">Encode</a></dl>
           <dl class="ml-4"><a href="javascript:;" @click="changeComponent(UrlDecode)" class="underline">Decode</a></dl>
         </dl>
