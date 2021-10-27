@@ -3,6 +3,8 @@ import { shallowRef } from 'vue';
 
 import Base64Encode from './views/Base64Encode.vue';
 import Base64Decode from './views/Base64Decode.vue';
+import UrlEncode from './views/UrlEncode.vue';
+import UrlDecode from './views/UrlDecode.vue';
 
 const currentComponent = shallowRef(Base64Encode);
 
@@ -21,6 +23,11 @@ const changeComponent = (name) => {
           <dt>Base64</dt>
           <dl class="ml-4"><a href="javascript:;" @click="changeComponent(Base64Encode)" class="underline">Encode</a></dl>
           <dl class="ml-4"><a href="javascript:;" @click="changeComponent(Base64Decode)" class="underline">Decode</a></dl>
+        </dl>
+        <dl>
+          <dt>Base64</dt>
+          <dl class="ml-4"><a href="javascript:;" @click="changeComponent(UrlEncode)" class="underline">Encode</a></dl>
+          <dl class="ml-4"><a href="javascript:;" @click="changeComponent(UrlDecode)" class="underline">Decode</a></dl>
         </dl>
       </div>
     </div>
