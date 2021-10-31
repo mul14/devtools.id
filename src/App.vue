@@ -9,6 +9,7 @@
     { name: 'URL Decode', slug: 'url-decode' },
     { name: 'URL Encode', slug: 'url-encode' },
     { name: 'Hash Generator', slug: 'hash-generator' },
+    { name: 'Password Generator', slug: 'password-generator' },
   ]);
 
   const filteredMenus = computed(() => menus.filter((menu) => menu.name.toLowerCase().includes(search.value)))
