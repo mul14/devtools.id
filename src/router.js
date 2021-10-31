@@ -6,6 +6,7 @@ const routes = [
   { path: '/base64-encode', component: () => import('./views/Base64Encode.vue') },
   { path: '/url-decode', component: () => import('./views/UrlDecode.vue') },
   { path: '/url-encode', component: () => import('./views/UrlEncode.vue') },
+  { path: '/url-parser', component: () => import('./views/UrlParser.vue') },
   { path: '/hash-generator', component: () => import('./views/HashGenerator.vue') },
   { path: '/password-generator', component: () => import('./views/PasswordGenerator.vue') },
 ]

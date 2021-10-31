@@ -8,6 +8,7 @@
     { name: 'Base64 Encode', slug: 'base64-encode' },
     { name: 'URL Decode', slug: 'url-decode' },
     { name: 'URL Encode', slug: 'url-encode' },
+    { name: 'URL Parser', slug: 'url-parser' },
     { name: 'Hash Generator', slug: 'hash-generator' },
     { name: 'Password Generator', slug: 'password-generator' },
   ]);
@@ -29,7 +30,7 @@
         </dl>
       </div>
     </div>
-    <div class="p-6 w-full">
+    <div class="px-6 pt-6 pb-56 w-full">
       <router-view />
     </div>
   </div>
