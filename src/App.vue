@@ -10,6 +10,7 @@
     { name: 'URL Encode', slug: 'url-encode' },
     { name: 'Hash Generator', slug: 'hash-generator' },
     { name: 'Password Generator', slug: 'password-generator' },
+    { name: 'UUID Generator', slug: 'uuid' },
   ]);
 
   const filteredMenus = computed(() => menus.filter((menu) => menu.name.toLowerCase().includes(search.value)))

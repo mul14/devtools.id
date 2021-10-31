@@ -8,6 +8,7 @@ const routes = [
   { path: '/url-encode', component: () => import('./views/UrlEncode.vue') },
   { path: '/hash-generator', component: () => import('./views/HashGenerator.vue') },
   { path: '/password-generator', component: () => import('./views/PasswordGenerator.vue') },
+  { path: '/uuid', component: () => import('./views/UUID.vue') },
 ]
 
 const router = createRouter({

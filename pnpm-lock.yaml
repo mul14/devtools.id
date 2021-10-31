@@ -1,12 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/uuid': ^8.3.1
   '@vitejs/plugin-vue': ^1.9.3
   autoprefixer: ^10.3.7
   crypto-js: ^4.1.1
   js-base64: ^3.7.2
   postcss: ^8.3.11
   tailwindcss: ^2.2.17
+  uuid: ^8.3.2
   vite: ^2.6.4
   vue: ^3.2.16
   vue-router: ^4
@@ -14,10 +16,12 @@ specifiers:
 dependencies:
   crypto-js: 4.1.1
   js-base64: 3.7.2
+  uuid: 8.3.2
   vue: 3.2.20
   vue-router: 4.0.12_vue@3.2.20
 
 devDependencies:
+  '@types/uuid': 8.3.1
   '@vitejs/plugin-vue': 1.9.4_vite@2.6.12
   autoprefixer: 10.3.7_postcss@8.3.11
   postcss: 8.3.11
@@ -76,6 +80,10 @@ packages:
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
+    dev: true
+
+  /@types/uuid/8.3.1:
+    resolution: {integrity: sha512-Y2mHTRAbqfFkpjldbkHGY8JIzRN6XqYRliG8/24FcHm2D2PwW24fl5xMRTVGdrb7iMrwCaIEbLWerGIkXuFWVg==}
     dev: true
 
   /@vitejs/plugin-vue/1.9.4_vite@2.6.12:
@@ -1198,6 +1206,11 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
 
   /vite/2.6.12:
     resolution: {integrity: sha512-0K7HUgAFiWOCWMkshjunCieTgawoSfmtExTwNoaVc5uTUb3ZEWb3DUP9Ze1l5dZZBxmNrbo5GrmJp2UJA3g+jA==}
