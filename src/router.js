@@ -10,6 +10,7 @@ const routes = [
   { path: '/hash-generator', component: () => import('./views/HashGenerator.vue') },
   { path: '/password-generator', component: () => import('./views/PasswordGenerator.vue') },
   { path: '/uuid', component: () => import('./views/UUID.vue') },
+  { path: '/lorem', component: () => import('./views/Lorem.vue') },
 ]
 
 const router = createRouter({
