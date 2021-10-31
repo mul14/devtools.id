@@ -14,6 +14,7 @@
     { name: 'UUID Generator', slug: 'uuid' },
     { name: 'Lorem Ipsum', slug: 'lorem' },
     { name: 'Text Converter', slug: 'text' },
+    { name: 'Epoch', slug: 'epoch' },
   ]);
 
   const filteredMenus = computed(() => menus.filter((menu) => menu.name.toLowerCase().includes(search.value)))
