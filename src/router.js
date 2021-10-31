@@ -12,6 +12,7 @@ const routes = [
   { path: '/uuid', component: () => import('./views/UUID.vue') },
   { path: '/lorem', component: () => import('./views/Lorem.vue') },
   { path: '/text', component: () => import('./views/TextConverter.vue') },
+  { path: '/epoch', component: () => import('./views/EpochConverter.vue') },
 ]
 
 const router = createRouter({
