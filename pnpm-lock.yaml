@@ -8,10 +8,12 @@ specifiers:
   tailwindcss: ^2.2.17
   vite: ^2.6.4
   vue: ^3.2.16
+  vue-router: ^4
 
 dependencies:
   js-base64: 3.7.2
   vue: 3.2.20
+  vue-router: 4.0.12_vue@3.2.20
 
 devDependencies:
   '@vitejs/plugin-vue': 1.9.4_vite@2.6.12
@@ -119,6 +121,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.20
       '@vue/shared': 3.2.20
+    dev: false
+
+  /@vue/devtools-api/6.0.0-beta.19:
+    resolution: {integrity: sha512-ObzQhgkoVeoyKv+e8+tB/jQBL2smtk/NmC9OmFK8UqdDpoOdv/Kf9pyDWL+IFyM7qLD2C75rszJujvGSPSpGlw==}
     dev: false
 
   /@vue/reactivity/3.2.20:
@@ -1210,6 +1216,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /vue-router/4.0.12_vue@3.2.20:
+    resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@vue/devtools-api': 6.0.0-beta.19
+      vue: 3.2.20
+    dev: false
 
   /vue/3.2.20:
     resolution: {integrity: sha512-81JjEP4OGk9oO8+CU0h2nFPGgJBm9mNa3kdCX2k6FuRdrWrC+CNe+tOnuIeTg8EWwQuI+wwdra5Q7vSzp7p4Iw==}
