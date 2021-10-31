@@ -26,6 +26,11 @@
             <router-link to="/url-encode">URL Encode</router-link>
           </dd>
         </dl>
+        <dl>
+          <dd>
+            <router-link to="/hash-generator">Hash Generator</router-link>
+          </dd>
+        </dl>
       </div>
     </div>
     <div class="p-6 w-full">

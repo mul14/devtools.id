@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^1.9.3
   autoprefixer: ^10.3.7
+  crypto-js: ^4.1.1
   js-base64: ^3.7.2
   postcss: ^8.3.11
   tailwindcss: ^2.2.17
@@ -11,6 +12,7 @@ specifiers:
   vue-router: ^4
 
 dependencies:
+  crypto-js: 4.1.1
   js-base64: 3.7.2
   vue: 3.2.20
   vue-router: 4.0.12_vue@3.2.20
@@ -373,6 +375,10 @@ packages:
       path-type: 4.0.0
       yaml: 1.10.2
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /css-color-names/0.0.4:
     resolution: {integrity: sha1-gIrcLnnPhHOAabZGyyDsJ762KeA=}
