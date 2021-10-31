@@ -9,6 +9,7 @@
   "dependencies": {
     "crypto-js": "^4.1.1",
     "js-base64": "^3.7.2",
+    "lorem-ipsum": "^2.0.4",
     "uuid": "^8.3.2",
     "vue": "^3.2.16",
     "vue-router": "^4"

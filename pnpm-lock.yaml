@@ -6,6 +6,7 @@ specifiers:
   autoprefixer: ^10.3.7
   crypto-js: ^4.1.1
   js-base64: ^3.7.2
+  lorem-ipsum: ^2.0.4
   postcss: ^8.3.11
   tailwindcss: ^2.2.17
   uuid: ^8.3.2
@@ -16,6 +17,7 @@ specifiers:
 dependencies:
   crypto-js: 4.1.1
   js-base64: 3.7.2
+  lorem-ipsum: 2.0.4
   uuid: 8.3.2
   vue: 3.2.20
   vue-router: 4.0.12_vue@3.2.20
@@ -363,6 +365,10 @@ packages:
       color-convert: 2.0.1
       color-string: 1.6.0
     dev: true
+
+  /commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+    dev: false
 
   /commander/6.2.1:
     resolution: {integrity: sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==}
@@ -846,6 +852,14 @@ packages:
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
+
+  /lorem-ipsum/2.0.4:
+    resolution: {integrity: sha512-TD+ERYfxjYiUfOyaKU6OH4euumNVeKoo3BxIhokb7bGmoCULsME48onF9NVxYK3CU1z9L5ALnkDkW8lIkHvMNQ==}
+    engines: {node: '>= 8.x', npm: '>= 5.x'}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+    dev: false
 
   /magic-string/0.25.7:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
