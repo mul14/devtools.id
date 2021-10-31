@@ -7,6 +7,7 @@ const routes = [
   { path: '/url-decode', component: () => import('./views/UrlDecode.vue') },
   { path: '/url-encode', component: () => import('./views/UrlEncode.vue') },
   { path: '/hash-generator', component: () => import('./views/HashGenerator.vue') },
+  { path: '/password-generator', component: () => import('./views/PasswordGenerator.vue') },
 ]
 
 const router = createRouter({
