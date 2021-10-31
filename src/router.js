@@ -11,6 +11,7 @@ const routes = [
   { path: '/password-generator', component: () => import('./views/PasswordGenerator.vue') },
   { path: '/uuid', component: () => import('./views/UUID.vue') },
   { path: '/lorem', component: () => import('./views/Lorem.vue') },
+  { path: '/text', component: () => import('./views/TextConverter.vue') },
 ]
 
 const router = createRouter({

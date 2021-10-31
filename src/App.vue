@@ -13,6 +13,7 @@
     { name: 'Password Generator', slug: 'password-generator' },
     { name: 'UUID Generator', slug: 'uuid' },
     { name: 'Lorem Ipsum', slug: 'lorem' },
+    { name: 'Text Converter', slug: 'text' },
   ]);
 
   const filteredMenus = computed(() => menus.filter((menu) => menu.name.toLowerCase().includes(search.value)))
