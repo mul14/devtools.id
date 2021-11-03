@@ -7,6 +7,8 @@ const options = reactive({
   lowercase: true,
   uppercase: true,
   numbers: true,
+  symbols: false,
+  spaces: false,
   length: 64,
 });
 
@@ -24,6 +26,14 @@ const submit = () => {
 
   if (options.numbers) {
     possible += '0123456789'
+  }
+
+  if (options.symbols) {
+    possible += `~\`!@#$%^&*()-_+=[]\{}|:;"\\',./?>`
+  }
+
+  if (options.spaces) {
+    possible += ' '.repeat(6)
   }
 
   for (let i = 0; i < options.length; i++) {
@@ -54,6 +64,18 @@ const submit = () => {
           <label>
             <input type="checkbox" v-model="options.numbers" />
             Numbers (0-9)
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" v-model="options.symbols" />
+            Symbols (~`!@#$%^&*()-_+=[]\{}|:;"\',./?>)
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" v-model="options.spaces" />
+            Space
           </label>
         </div>
         <div>
