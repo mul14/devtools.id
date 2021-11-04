@@ -13,6 +13,7 @@ const routes = [
   { path: '/lorem', component: () => import('./views/Lorem.vue') },
   { path: '/text', component: () => import('./views/TextConverter.vue') },
   { path: '/epoch', component: () => import('./views/EpochConverter.vue') },
+  { path: '/json-formatter', component: () => import('./views/JsonFormatter.vue') },
 ]
 
 const router = createRouter({
