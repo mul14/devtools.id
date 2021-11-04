@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import { shallowRef, nextTick } from 'vue';
+import { useStore } from '../store';
 
-import Base64Encode from './Base64Encode.vue';
-import Base64Decode from './Base64Decode.vue';
-import UrlEncode from './UrlEncode.vue';
-import UrlDecode from './UrlDecode.vue';
-
-const currentComponent = shallowRef(Base64Encode);
-
-const changeComponent = (name) => {
-  nextTick(() => {
-    currentComponent.value = name
-  })
-}
+const { menus } = useStore()
 </script>
 
 <template>
-  <h1>Welcome</h1>
+  <div class="space-y-10">
+    <h1 class="text-xl">Welcome</h1>
+
+    <div>Choose whatever you need...</div>
+
+    <div class="grid grid-cols-4 gap-4">
+      <router-link
+        v-for="(menu, index) in menus"
+        :to="menu.slug"
+        class="flex border rounded-lg px-4 py-10 justify-center items-center bg-gradient-to-t from-gray-100 to-gray-50 hover:from-gray-200 hover:to-gray-100 active:from-gray-300 active:to-gray-200"
+      >{{ menu.name }}</router-link>
+    </div>
+  </div>
 </template>
