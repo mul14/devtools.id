@@ -22,7 +22,7 @@ const generateParagraphsHtml = () => output.value = loremHtml.generateParagraphs
     <h1 class="text-3xl">Lorem Ipsum Generator</h1>
     <hr class="my-6" />
     <div class="flex flex-col gap-4">
-      <div class="space-x-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 justify-start gap-4">
         <button
           @click="generateWords"
           class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
