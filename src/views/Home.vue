@@ -10,7 +10,7 @@ const { menus } = useStore()
 
     <div>Choose whatever you need...</div>
 
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <router-link
         v-for="(menu, index) in menus"
         :to="menu.slug"
