@@ -16,6 +16,7 @@ export const useStore = defineStore('main', {
         { name: 'Text Converter', slug: 'text' },
         { name: 'Epoch', slug: 'epoch' },
         { name: 'JSON Formatter', slug: 'json-formatter' },
+        { name: 'Serialize (PHP)', slug: 'serialize' },
       ]
     }
   },

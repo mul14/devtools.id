@@ -89,6 +89,13 @@ const routes = [
       title: 'JSON Formatter',
     },
   },
+  {
+    path: '/serialize',
+    component: () => import('./views/Serializer.vue'),
+    meta: {
+      title: 'Serialize (PHP)',
+    },
+  },
 ]
 
 const router = createRouter({
