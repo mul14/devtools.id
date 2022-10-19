@@ -30,12 +30,12 @@
 </script>
 
 <template>
-  <div class="p-4 bg-gray-50 border-b flex justify-between items-center">
+  <div class="p-4 bg-white border-b-2 border-gray flex justify-between items-center">
     <button @click="toggleMenu" class="">
       <span class="text-3xl -mt-2 lg:hidden" :class="isMenuOpen ? 'hidden' : ''">☰</span>
       <span class="text-3xl ml-2 lg:hidden" :class="isMenuOpen ? '' : 'hidden'">&times;</span>
     </button>
-    <h1 class="font-bold">
+    <h1 class="font-bold text-2xl font-inter">
       <router-link to="/" title="Trivial Tools and Utilities for Developers">
         DevTools.id
       </router-link>
@@ -49,8 +49,8 @@
       </button>
     </nav>
   </div>
-  <div class="flex">
-    <div class="w-full sm:w-1/3 lg:w-3/12 p-4 border-r relative lg:block" :class="isMenuOpen ? '': 'hidden'">
+  <div class="flex bg-ghostWhite">
+    <div class="w-full sm:w-1/3 lg:w-3/12 p-4 border-r border-gray relative lg:block " :class="isMenuOpen ? '': 'hidden'">
       <input type="search" v-model="search" placeholder="Type to search" class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 bg-gray-100" />
       <nav class="space-y-4 sticky overflow-auto h-screen py-2">
         <dl class="space-y-0.5">
