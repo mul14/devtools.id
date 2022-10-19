@@ -35,30 +35,30 @@
       <span class="text-3xl -mt-2 lg:hidden" :class="isMenuOpen ? 'hidden' : ''">☰</span>
       <span class="text-3xl ml-2 lg:hidden" :class="isMenuOpen ? '' : 'hidden'">&times;</span>
     </button>
-    <h1 class="font-bold text-2xl font-inter">
+    <h1 class="font-extrabold text-xl text-darkBlue uppercase">
       <router-link to="/" title="Trivial Tools and Utilities for Developers">
         DevTools.id
       </router-link>
     </h1>
     <nav>
-      <button @click="router.back()" :disabled="!historyState.allowBack" class="px-2 py-2 rounded-lg border border-transparent text-gray-600 hover:border-gray-300 active:bg-gray-100 disabled:opacity-25 disabled:hover:border-transparent disabled:active:bg-transparent" title="Previous">
+      <button @click="router.back()" :disabled="!historyState.allowBack" class="px-2 py-2 rounded-xl border border-transparent text-gray-600 hover:border-gray active:shadow-custom disabled:opacity-25 disabled:hover:border-transparent disabled:active:bg-transparent" title="Previous">
         <Arrow class="rotate-180 w-5" />
       </button>
-      <button @click="router.forward()" :disabled="!historyState.allowForward" class="px-2 py-2 rounded-lg border border-transparent text-gray-600 hover:border-gray-300 active:bg-gray-100 disabled:opacity-25 disabled:hover:border-transparent disabled:active:bg-transparent" title="Next">
+      <button @click="router.forward()" :disabled="!historyState.allowForward" class="px-2 py-2 rounded-xl border border-transparent text-gray-600 hover:border-gray active:shadow-custom disabled:opacity-25 disabled:hover:border-transparent disabled:active:bg-transparent" title="Next">
         <Arrow class="w-5"/>
       </button>
     </nav>
   </div>
   <div class="flex bg-ghostWhite">
     <div class="w-full sm:w-1/3 lg:w-3/12 p-4 border-r border-gray relative lg:block " :class="isMenuOpen ? '': 'hidden'">
-      <input type="search" v-model="search" placeholder="Type to search" class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 bg-gray-100" />
+      <input type="search" v-model="search" placeholder="Type to search" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
       <nav class="space-y-4 sticky overflow-auto h-screen py-2">
         <dl class="space-y-0.5">
           <dd v-for="(menu, index) in filteredMenus" :key="index">
             <router-link
               :to="menu.slug"
               @click="toggleMenu"
-              class="block rounded-lg hover:bg-gray-300 px-4 py-2">
+              class="block px-4 py-2 border-t border-gray text-darkBlue text-sm font-normal">
               {{ menu.name }}
             </router-link>
           </dd>
