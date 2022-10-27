@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Roboto:wght@300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: 'poppins' "Roboto", "Droid Sans", "Helvetica Neue";
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url('/src/fonts/Poppins-Light.ttf');
+}

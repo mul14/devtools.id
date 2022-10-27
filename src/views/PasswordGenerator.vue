@@ -85,7 +85,7 @@ const submit = () => {
               type="number"
               v-model="options.length"
               min="1"
-              class="rounded-lg border border-gray-300 focus:outline-none p-2"
+              class="rounded-md border border-darkBlue focus:outline-none p-2"
             />
           </label>
         </div>
@@ -97,12 +97,12 @@ const submit = () => {
             type="text"
             v-model="output"
             readonly
-            class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100"
+            class="w-full rounded-md border border-darkBlue focus:outline-none p-2 font-mono bg-gray"
           />
         </div>
         <button
           @click="submit"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Refresh</button>
       </div>
     </div>
