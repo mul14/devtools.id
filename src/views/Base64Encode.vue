@@ -12,8 +12,8 @@ const submit = () => {
 
 <template>
   <div class>
-    <h1 class="text-3xl">Base64 Encode</h1>
-    <hr class="my-6" />
+    <h1 class="font-normal text-2xl text-darkBlue uppercase">Base64 Encode</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
       <div>
         <textarea
@@ -23,7 +23,7 @@ const submit = () => {
         ></textarea>
         <button
           @click="submit"
-          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
+          class="rounded-md my-4 px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Encode</button>
       </div>
       <div>

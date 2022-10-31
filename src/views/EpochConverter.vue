@@ -21,34 +21,34 @@ onMounted(() => {
 
 <template>
   <div class>
-    <h1 class="text-3xl">Epoch Converter</h1>
-    <hr class="my-6" />
+    <h1 class="font-normal text-2xl text-darkBlue uppercase">Epoch Converter</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
-      <div>
+      <div class='font-mono text-base text-darkBlue'>
         Current epoch:
         <span class="font-mono">{{ currentEpoch }}</span>
       </div>
       <div class="flex">
         <input
           v-model="input"
-          class="rounded-l-lg border-l border-t border-b border-gray-300 focus:outline-none p-2 font-mono"
+          class="rounded-md border-gray-300 py-2 px-4 shadow-custom focus:border-indigo-500 focus:ring-indigo-500"
           rows="3"
         />
         <button
           @click="submit"
-          class="rounded-r-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-r-lg px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Convert</button>
       </div>
       <div class="w-1/2 space-y-4">
         <input
           readonly
           v-model="outputHuman"
-          class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100"
+          class="w-full rounded-md border-gray-300 py-2 px-4 shadow-custom focus:border-indigo-500 focus:ring-indigo-500"
         />
         <input
           readonly
           v-model="outputIso"
-          class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100"
+          class="w-full rounded-md border-gray-300 py-2 px-4 shadow-custom focus:border-indigo-500 focus:ring-indigo-500"
         />
       </div>
     </div>

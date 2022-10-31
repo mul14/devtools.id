@@ -12,8 +12,8 @@ const doUnserialize = () => output.value = JSON.stringify(unserialize(input.valu
 
 <template>
   <div class>
-    <h1 class="text-3xl">Serializer (PHP)</h1>
-    <hr class="my-6" />
+    <h1 class="font-normal text-2xl text-darkBlue uppercase">Serializer (PHP)</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
       <div>
         <textarea

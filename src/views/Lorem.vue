@@ -19,8 +19,8 @@ const generateParagraphsHtml = () => output.value = loremHtml.generateParagraphs
 
 <template>
   <div class>
-    <h1 class="text-3xl">Lorem Ipsum Generator</h1>
-    <hr class="my-6" />
+    <h1 class="font-normal text-2xl text-darkBlue uppercase">Lorem Ipsum Generator</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 justify-start gap-4">
         <button
