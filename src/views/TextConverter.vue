@@ -12,8 +12,8 @@ const toSlug = () => output.value = input.value.toLocaleLowerCase().replace(/\W/
 
 <template>
   <div class>
-    <h1 class="text-3xl">Text Converter</h1>
-    <hr class="my-6" />
+    <h1 class="font-normal text-2xl text-darkBlue uppercase">Text Converter</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
       <textarea
         v-model="input"

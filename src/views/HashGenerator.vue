@@ -17,8 +17,8 @@ const submit = () => {
 
 <template>
   <div class>
-    <h1 class="text-3xl">Hash Generator</h1>
-    <hr class="my-6" />
+    <h1 class="font-normal text-2xl text-darkBlue uppercase">Hash Generator</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
       <div>
         <textarea
@@ -28,17 +28,17 @@ const submit = () => {
         ></textarea>
         <button
           @click="submit"
-          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
+          class="rounded-md my-4 px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Hash</button>
       </div>
       <div class="space-y-4">
         <div>
           <label>MD5</label>
-          <input type="text" v-model="output.md5" readonly class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100" />
+          <input type="text" v-model="output.md5" readonly class="w-full font-mono rounded-md border-gray-300 py-2 px-4 shadow-custom focus:border-indigo-500 focus:ring-indigo-500" />
         </div>
         <div>
           <label>SHA1</label>
-          <input type="text" v-model="output.sha1" readonly class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100" />
+          <input type="text" v-model="output.sha1" readonly class="w-full font-mono rounded-md border-gray-300 py-2 px-4 shadow-custom focus:border-indigo-500 focus:ring-indigo-500" />
         </div>
       </div>
     </div>
