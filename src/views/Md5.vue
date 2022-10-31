@@ -6,7 +6,7 @@ const input = ref('admin')
 const output = ref('21232f297a57a5a743894a0e4a801fc3')
 
 const submit = () => {
-  output.value = md5(input.value)
+  output.value = md5(input.value).toString()
 }
 </script>
 
@@ -24,7 +24,7 @@ const submit = () => {
         <button
           @click="submit"
           class="rounded-md my-4 px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >Generate Slug</button>
+        >MD5 Hash</button>
       </div>
       <div>
         <textarea
