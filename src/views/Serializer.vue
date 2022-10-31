@@ -18,7 +18,7 @@ const doUnserialize = () => output.value = JSON.stringify(unserialize(input.valu
       <div>
         <textarea
           v-model="input"
-          class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono"
+          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
           rows="8"
         ></textarea>
       </div>
@@ -39,7 +39,7 @@ const doUnserialize = () => output.value = JSON.stringify(unserialize(input.valu
       <div>
         <textarea
           v-model="output"
-          class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100"
+          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
           rows="8"
           readonly
         ></textarea>

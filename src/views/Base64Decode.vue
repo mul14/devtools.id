@@ -12,13 +12,13 @@ const submit = () => {
 
 <template>
   <div class>
-    <h1 class="text-3xl">Base64 Decode</h1>
-    <hr class="my-6" />
+    <h1 class="tfont-extrabold text-xl text-darkBlue uppercase ">Base64 Decode</h1>
+    <div class="border-b-2 border-gray mb-8 mt-2"></div>
     <div class="flex flex-col gap-4">
       <div>
         <textarea
           v-model="input"
-          class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono"
+          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
           rows="8"
         ></textarea>
         <button
@@ -29,7 +29,7 @@ const submit = () => {
       <div>
         <textarea
           v-model="output"
-          class="w-full rounded-lg border border-gray-300 focus:outline-none p-2 font-mono bg-gray-100"
+          class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-custom focus:border-indigo-500 focus:ring-indigo-500"
           rows="8"
           readonly
         ></textarea>
