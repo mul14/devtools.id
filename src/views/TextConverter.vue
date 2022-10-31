@@ -23,19 +23,19 @@ const toSlug = () => output.value = input.value.toLocaleLowerCase().replace(/\W/
       <div class="space-x-4">
         <button
           @click="toLowercase"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Lower Case</button>
         <button
           @click="toUppercase"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Upper Case</button>
         <button
           @click="toCapitalize"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Capitalize</button>
         <button
           @click="toSlug"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Slug</button>
       </div>
     

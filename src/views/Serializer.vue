@@ -25,13 +25,13 @@ const doUnserialize = () => output.value = JSON.stringify(unserialize(input.valu
       <div class="space-x-2">
         <button
           @click="doSerialize"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >
           Serialize
         </button>
         <button
           @click="doUnserialize"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >
           Unserialize
         </button>
