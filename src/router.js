@@ -20,6 +20,13 @@ const routes = [
     },
   },
   {
+    path: '/md5',
+    component: () => import('./views/Md5.vue'),
+    meta: {
+      title: 'MD5 Hash',
+    },
+  },
+  {
     path: '/slug',
     component: () => import('./views/SlugGenerator.vue'),
     meta: {
