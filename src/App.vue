@@ -76,6 +76,10 @@
 
 <style scoped>
   nav .router-link-exact-active {
-    background: #e5e7eb;
+    background: #604fcd;
+    font-size: medium;
+    color: white;
+    font-weight: 600;
+    font-family: monospace;
   }
 </style>
