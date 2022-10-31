@@ -25,28 +25,28 @@ const generateParagraphsHtml = () => output.value = loremHtml.generateParagraphs
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 justify-start gap-4">
         <button
           @click="generateWords"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Words</button>
         <button
           @click="generateSentences"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Sentence</button>
         <button
           @click="generateParagraphs"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Paragraph</button>
 
         <button
           @click="generateWordsHtml"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Words HTML</button>
         <button
           @click="generateSentencesHtml"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Sentence HTML</button>
         <button
           @click="generateParagraphsHtml"
-          class="rounded-lg px-4 py-2 text-white bg-gray-400 hover:bg-gray-500"
+          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
         >Paragraph HTML</button>
 
       </div>
