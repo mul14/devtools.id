@@ -20,6 +20,13 @@ const routes = [
     },
   },
   {
+    path: '/slug',
+    component: () => import('./views/SlugGenerator.vue'),
+    meta: {
+      title: 'Slug Generator',
+    },
+  },
+  {
     path: '/url-decode',
     component: () => import('./views/UrlDecode.vue'),
     meta: {

@@ -6,6 +6,7 @@ export const useStore = defineStore('main', {
       menus: [
         { name: 'Base64 Decode', slug: 'base64-decode' },
         { name: 'Base64 Encode', slug: 'base64-encode' },
+        { name: 'Slug Generator', slug: 'slug' },
         { name: 'URL Decode', slug: 'url-decode' },
         { name: 'URL Encode', slug: 'url-encode' },
         { name: 'URL Parser', slug: 'url-parser' },
