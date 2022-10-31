@@ -27,6 +27,13 @@ const routes = [
     },
   },
   {
+    path: '/sha1',
+    component: () => import('./views/Sha1.vue'),
+    meta: {
+      title: 'SHA1 Hash',
+    },
+  },
+  {
     path: '/slug',
     component: () => import('./views/SlugGenerator.vue'),
     meta: {
