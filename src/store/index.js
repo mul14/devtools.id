@@ -8,6 +8,7 @@ export const useStore = defineStore('main', {
         { name: 'Base64 Encode', slug: 'base64-encode' },
         { name: 'MD5 Hash', slug: 'md5' },
         { name: 'SHA1 Hash', slug: 'sha1' },
+        { name: 'Bcrypt Hash', slug: 'bcrypt' },
         { name: 'Slug Generator', slug: 'slug' },
         { name: 'URL Decode', slug: 'url-decode' },
         { name: 'URL Encode', slug: 'url-encode' },
