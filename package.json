@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.7",
+    "bcryptjs": "^3.0.2",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.10.7",
     "js-base64": "^3.7.2",

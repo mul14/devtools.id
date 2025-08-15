@@ -34,6 +34,13 @@ const routes = [
     },
   },
   {
+    path: '/bcrypt',
+    component: () => import('./views/BcryptGenerator.vue'),
+    meta: {
+      title: 'Bcrypt Hash Generator',
+    },
+  },
+  {
     path: '/slug',
     component: () => import('./views/SlugGenerator.vue'),
     meta: {
