@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { encode } from 'js-base64'
+import ToolLayout from '../components/ToolLayout.vue'
 
 const input = ref('Hello World!')
 const output = ref('')
@@ -8,32 +9,70 @@ const output = ref('')
 const submit = () => {
   output.value = encode(input.value)
 }
+
+const copy = () => navigator.clipboard.writeText(output.value)
+const clear = () => {
+  input.value = ''
+  output.value = ''
+}
 </script>
 
 <template>
-  <div class>
-    <h1 class="font-normal text-2xl text-darkBlue uppercase">Base64 Encode</h1>
-    <div class="border-b-2 border-gray mb-8 mt-2"></div>
-    <div class="flex flex-col gap-4">
-      <div>
-        <textarea
-          v-model="input"
-          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
-          rows="8"
-        ></textarea>
-        <button
-          @click="submit"
-          class="rounded-md my-4 px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >Encode</button>
-      </div>
-      <div>
-        <textarea
-          v-model="output"
-          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
-          rows="8"
-          readonly
-        ></textarea>
-      </div>
-    </div>
-  </div>
+  <ToolLayout
+    title="Base64 Encode"
+    description="Encode text strings into Base64 format for safe data transmission."
+    category="Encoders"
+    icon="lock"
+    icon-color="blue"
+    input-label="Plain Text"
+    output-label="Base64 Output"
+    @clear="clear"
+    @copy="copy"
+  >
+    <!-- Header Actions -->
+    <template #header-actions>
+      <button
+        @click="submit"
+        class="flex items-center gap-2 px-4 py-2 bg-primary text-white dark:text-background-dark rounded-lg text-sm font-bold hover:brightness-110"
+      >
+        <span class="material-symbols-outlined text-lg font-bold">play_arrow</span>
+        Encode
+      </button>
+    </template>
+
+    <!-- Input Panel -->
+    <template #input>
+      <textarea
+        v-model="input"
+        class="tool-editor"
+        placeholder="Enter text to encode..."
+        spellcheck="false"
+      ></textarea>
+    </template>
+
+    <!-- Input Footer Left -->
+    <template #input-footer-left>
+      <span class="text-xs text-slate-500 dark:text-slate-500 italic">
+        Characters: {{ input.length }}
+      </span>
+    </template>
+
+    <!-- Output Panel -->
+    <template #output>
+      <textarea
+        v-model="output"
+        class="tool-editor"
+        readonly
+        placeholder="Encoded output will appear here..."
+        spellcheck="false"
+      ></textarea>
+    </template>
+
+    <!-- Output Header Right -->
+    <template #output-header-right>
+      <span class="text-xs text-slate-500">
+        Length: <span class="text-primary">{{ output.length }}</span>
+      </span>
+    </template>
+  </ToolLayout>
 </template>

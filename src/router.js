@@ -6,6 +6,20 @@ const routes = [
     component: () => import('./views/Home.vue'),
   },
   {
+    path: '/tools',
+    component: () => import('./views/Tools.vue'),
+    meta: {
+      title: 'All Tools',
+    },
+  },
+  {
+    path: '/tools/:category',
+    component: () => import('./views/Tools.vue'),
+    meta: {
+      title: 'Tools',
+    },
+  },
+  {
     path: '/base64-decode',
     component: () => import('./views/Base64Decode.vue'),
     meta: {

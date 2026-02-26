@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import ToolLayout from '../components/ToolLayout.vue'
 
 const input = ref('Hello everybody! Welcome to the new world!')
 const output = ref('')
@@ -8,43 +9,91 @@ const toLowercase = () => output.value = input.value.toLocaleLowerCase()
 const toUppercase = () => output.value = input.value.toLocaleUpperCase()
 const toCapitalize = () => output.value = input.value.replace(/\b\w/g, (l) => l.toUpperCase())
 const toSlug = () => output.value = input.value.toLocaleLowerCase().replace(/\W/g, '-').replace(/\-{2,}/g, '-').replace(/\-$/, '')
+
+const copy = () => navigator.clipboard.writeText(output.value)
+const clear = () => {
+  input.value = ''
+  output.value = ''
+}
 </script>
 
 <template>
-  <div class>
-    <h1 class="font-normal text-2xl text-darkBlue uppercase">Text Converter</h1>
-    <div class="border-b-2 border-gray mb-8 mt-2"></div>
-    <div class="flex flex-col gap-4">
+  <ToolLayout
+    title="Text Converter"
+    description="Convert text between different cases: uppercase, lowercase, title case, and more."
+    category="Formatters"
+    icon="text_fields"
+    icon-color="sky"
+    input-label="Input Text"
+    output-label="Converted Text"
+    @clear="clear"
+    @copy="copy"
+  >
+    <!-- Header Actions -->
+    <template #header-actions>
+      <button
+        @click="toLowercase"
+        class="flex items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-neutral-800 rounded-lg text-xs font-medium hover:bg-slate-200 dark:hover:bg-neutral-700 border border-slate-200 dark:border-primary/5 text-slate-700 dark:text-slate-200"
+      >
+        <span class="material-symbols-outlined text-base">text_decrease</span>
+        lowercase
+      </button>
+      <button
+        @click="toUppercase"
+        class="flex items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-neutral-800 rounded-lg text-xs font-medium hover:bg-slate-200 dark:hover:bg-neutral-700 border border-slate-200 dark:border-primary/5 text-slate-700 dark:text-slate-200"
+      >
+        <span class="material-symbols-outlined text-base">text_increase</span>
+        UPPERCASE
+      </button>
+      <button
+        @click="toCapitalize"
+        class="flex items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-neutral-800 rounded-lg text-xs font-medium hover:bg-slate-200 dark:hover:bg-neutral-700 border border-slate-200 dark:border-primary/5 text-slate-700 dark:text-slate-200"
+      >
+        <span class="material-symbols-outlined text-base">format_size</span>
+        Capitalize
+      </button>
+      <button
+        @click="toSlug"
+        class="flex items-center gap-2 px-3 py-2 bg-primary text-white dark:text-background-dark rounded-lg text-xs font-bold hover:brightness-110"
+      >
+        <span class="material-symbols-outlined text-base">link</span>
+        slug-case
+      </button>
+    </template>
+
+    <!-- Input Panel -->
+    <template #input>
       <textarea
         v-model="input"
-        class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
-        rows="8"
+        class="tool-editor"
+        placeholder="Enter your text here..."
+        spellcheck="false"
       ></textarea>
-      <div class="space-x-4">
-        <button
-          @click="toLowercase"
-          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >Lower Case</button>
-        <button
-          @click="toUppercase"
-          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >Upper Case</button>
-        <button
-          @click="toCapitalize"
-          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >Capitalize</button>
-        <button
-          @click="toSlug"
-          class="rounded-md px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >Slug</button>
-      </div>
-    
+    </template>
+
+    <!-- Input Footer Left -->
+    <template #input-footer-left>
+      <span class="text-xs text-slate-500 dark:text-slate-500 italic">
+        Characters: {{ input.length }} | Words: {{ input.trim() ? input.trim().split(/\s+/).length : 0 }}
+      </span>
+    </template>
+
+    <!-- Output Panel -->
+    <template #output>
       <textarea
         v-model="output"
-        class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
-        rows="8"
+        class="tool-editor"
         readonly
+        placeholder="Converted text will appear here..."
+        spellcheck="false"
       ></textarea>
-    </div>
-  </div>
+    </template>
+
+    <!-- Output Header Right -->
+    <template #output-header-right>
+      <span class="text-xs text-slate-500">
+        Length: <span class="text-primary">{{ output.length }}</span>
+      </span>
+    </template>
+  </ToolLayout>
 </template>

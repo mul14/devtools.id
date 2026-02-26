@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import md5 from 'md5'
+import ToolLayout from '../components/ToolLayout.vue'
 
 const input = ref('admin')
 const output = ref('21232f297a57a5a743894a0e4a801fc3')
@@ -8,32 +9,70 @@ const output = ref('21232f297a57a5a743894a0e4a801fc3')
 const submit = () => {
   output.value = md5(input.value).toString()
 }
+
+const copy = () => navigator.clipboard.writeText(output.value)
+const clear = () => {
+  input.value = ''
+  output.value = ''
+}
 </script>
 
 <template>
-  <div class>
-    <h1 class="font-normal text-2xl text-darkBlue uppercase">MD5 Hash</h1>
-    <div class="border-b-2 border-gray mb-8 mt-2"></div>
-    <div class="flex flex-col gap-4">
-      <div>
-        <textarea
-          v-model="input"
-          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
-          rows="8"
-        ></textarea>
-        <button
-          @click="submit"
-          class="rounded-md my-4 px-4 py-2 text-white bg-primary font-bold text-sm uppercase hover:bg-primary"
-        >MD5 Hash</button>
-      </div>
-      <div>
-        <textarea
-          v-model="output"
-          class="block w-full shadow-custom rounded-md border-indigo-500 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 bg-gray-100"
-          rows="8"
-          readonly
-        ></textarea>
-      </div>
-    </div>
-  </div>
+  <ToolLayout
+    title="MD5 Hash"
+    description="Generate MD5 hash checksums for text strings and verify data integrity."
+    category="Security"
+    icon="fingerprint"
+    icon-color="purple"
+    input-label="Plain Text"
+    output-label="MD5 Hash"
+    @clear="clear"
+    @copy="copy"
+  >
+    <!-- Header Actions -->
+    <template #header-actions>
+      <button
+        @click="submit"
+        class="flex items-center gap-2 px-4 py-2 bg-primary text-white dark:text-background-dark rounded-lg text-sm font-bold hover:brightness-110"
+      >
+        <span class="material-symbols-outlined text-lg font-bold">play_arrow</span>
+        Generate Hash
+      </button>
+    </template>
+
+    <!-- Input Panel -->
+    <template #input>
+      <textarea
+        v-model="input"
+        class="tool-editor"
+        placeholder="Enter text to hash..."
+        spellcheck="false"
+      ></textarea>
+    </template>
+
+    <!-- Input Footer Left -->
+    <template #input-footer-left>
+      <span class="text-xs text-slate-500 dark:text-slate-500 italic">
+        Characters: {{ input.length }}
+      </span>
+    </template>
+
+    <!-- Output Panel -->
+    <template #output>
+      <textarea
+        v-model="output"
+        class="tool-editor"
+        readonly
+        placeholder="Hash will appear here..."
+        spellcheck="false"
+      ></textarea>
+    </template>
+
+    <!-- Output Header Right -->
+    <template #output-header-right>
+      <span class="text-xs text-slate-500">
+        32 characters (128-bit)
+      </span>
+    </template>
+  </ToolLayout>
 </template>

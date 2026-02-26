@@ -1,17 +1,246 @@
-@import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   margin: 0;
-  font-family: 'poppins' "Roboto", "Droid Sans", "Helvetica Neue";
+  font-family: 'Space Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
-  font-family: "poppins";
-  src: url('/src/fonts/Poppins-Light.ttf');
+/* Light mode defaults */
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Dark mode */
+.dark body,
+body.dark {
+  background-color: #0a0f18;
+  color: #f1f5f9;
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: radial-gradient(circle at 2px 2px, rgba(66, 184, 131, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Hero search input - no extra styles */
+.search-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.search-input:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Glass card effect - Light mode */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Glass card effect - Dark mode */
+.dark .glass-card {
+  background: rgba(16, 22, 34, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Neon glow effects */
+.neon-glow-blue {
+  box-shadow: 0 0 15px rgba(43, 108, 238, 0.3);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+}
+
+/* Editor background */
+.editor-bg {
+  background: #0d1219;
+}
+
+/* Light mode editor */
+.editor-bg-light {
+  background: #f8fafc;
+}
+
+/* Line numbers styling */
+.line-numbers {
+  color: #4a5568;
+  text-align: right;
+  padding-right: 1rem;
+  user-select: none;
+}
+
+/* Tool editor textarea */
+.tool-editor {
+  @apply flex-1 w-full bg-transparent border-none font-mono text-sm p-4 resize-none focus:outline-none focus:ring-0;
+  min-height: 300px;
+}
+
+.dark .tool-editor {
+  @apply text-slate-200;
+  background: #0d1219;
+}
+
+.tool-editor {
+  @apply text-slate-800;
+  background: #f8fafc;
+}
+
+.tool-editor::placeholder {
+  @apply text-slate-400;
+}
+
+.dark .tool-editor::placeholder {
+  @apply text-slate-600;
+}
+
+/* Custom scrollbar for dark theme */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #111722;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2a3444;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3a4454;
+}
+
+/* Dark mode input styles */
+.dark input:not(.search-input),
+.dark textarea,
+.dark select {
+  background-color: #111722 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9 !important;
+}
+
+.dark input:not(.search-input):focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #42b883 !important;
+  box-shadow: 0 0 0 2px rgba(66, 184, 131, 0.2) !important;
+}
+
+.dark input:not(.search-input)::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Light mode input styles */
+input:not(.search-input),
+textarea,
+select {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+input:not(.search-input):focus,
+textarea:focus,
+select:focus {
+  border-color: #42b883 !important;
+  box-shadow: 0 0 0 2px rgba(66, 184, 131, 0.2) !important;
+}
+
+input:not(.search-input)::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Checkbox styling - Dark */
+.dark input[type="checkbox"] {
+  background-color: #1a2233 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark input[type="checkbox"]:checked {
+  background-color: #42b883 !important;
+  border-color: #42b883 !important;
+}
+
+/* Checkbox styling - Light */
+input[type="checkbox"] {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #42b883 !important;
+  border-color: #42b883 !important;
+}
+
+/* Number input styling */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Tool page styles */
+.tool-container {
+  @apply max-w-4xl mx-auto;
+}
+
+.tool-header {
+  @apply flex items-center gap-3 mb-6;
+}
+
+.tool-icon {
+  @apply size-10 rounded-lg flex items-center justify-center;
+}
+
+.tool-title {
+  @apply text-2xl font-bold text-slate-100;
+}
+
+.tool-card {
+  @apply bg-obsidian/90 border border-white/5 rounded-xl p-6 mb-4;
+}
+
+.tool-label {
+  @apply text-sm font-medium text-slate-400 mb-2 block;
+}
+
+.tool-input {
+  @apply w-full bg-surface border border-white/10 rounded-lg px-4 py-3 text-slate-100 font-mono text-sm focus:border-primary focus:ring-1 focus:ring-primary;
+}
+
+.tool-textarea {
+  @apply w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-slate-100 font-mono text-sm focus:border-primary focus:ring-1 focus:ring-primary resize-none;
+}
+
+.tool-button {
+  @apply px-6 py-2.5 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 transition-all;
+}
+
+.tool-button-secondary {
+  @apply px-6 py-2.5 bg-white/5 text-slate-300 border border-white/10 rounded-lg font-medium text-sm hover:bg-white/10 transition-all;
 }
